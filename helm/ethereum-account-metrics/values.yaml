@@ -1,0 +1,32 @@
+replicaCount: 1
+
+image:
+  repository: yourbuddyconner/ethereum-account-metrics
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+metrics: 
+  accounts:
+    - "0xba889D87b9aAc1Ac322e9FfC01040BDD16681e42"
+  rpcs:
+    - https://alfajores-forno.celo-testnet.org
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+podAnnotations: {}
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
